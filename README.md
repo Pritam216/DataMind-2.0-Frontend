@@ -29,7 +29,6 @@ It allows users to:
 ## 🌐 Live Demo
 
 🔗 **Live App:** https://datamind-agent.vercel.app/
-
 🎥 **Demo Video:** [![DataMind Frontend App](https://github.com/user-attachments/assets/2d4ed6cd-0b60-48e1-a920-ac56c2f509bb)](https://youtu.be/xN4UpiGVheg)
 
 
@@ -126,14 +125,16 @@ npm run build
 ## 🚀 Deployment
 
 Deployed using **Vercel**
+
 Supports environment-based API configuration.
 
----
 
 ## 📌 Project Status
 
 ✅ Actively maintained
+
 ✅ Production-ready
+
 🚧 Open for enhancements
 
 ---
@@ -141,6 +142,7 @@ Supports environment-based API configuration.
 ## 👤 Author
 
 **Pritam Kumar Roy**
+
 Built with ❤️ for data-driven intelligence
 
 ---
