@@ -22,13 +22,14 @@ It allows users to:
 * Toggle between light and dark themes
 * Navigate clean documentation
 
-### Backend Github repo : ![Go to](https://github.com/Pritam216/DataMind-2.0)
+### Backend Github repo : [Go to](https://github.com/Pritam216/DataMind-2.0)
 
 ---
 
 ## 🌐 Live Demo
 
 🔗 **Live App:** https://datamind-agent.vercel.app/
+
 🎥 **Demo Video:** [![DataMind Frontend App](https://github.com/user-attachments/assets/2d4ed6cd-0b60-48e1-a920-ac56c2f509bb)](https://youtu.be/xN4UpiGVheg)
 
 
