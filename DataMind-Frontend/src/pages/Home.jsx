@@ -11,7 +11,7 @@ import "../App.css";
 // const API_BASE = "https://datamind-20-production.up.railway.app";
 const API_BASE = "https://datamind-2-0.onrender.com";
 
-https: export default function Home() {
+export default function Home() {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [summary, setSummary] = useState("");
