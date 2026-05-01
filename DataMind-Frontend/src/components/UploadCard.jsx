@@ -1,4 +1,5 @@
 import "./UploadCard.css";
+import { FaUpload } from "react-icons/fa";
 
 export default function UploadCard({
   file,
@@ -54,13 +55,11 @@ export default function UploadCard({
   return (
     <div className="card">
       <h2>Upload CSV & Run EDA</h2>
-
       <input
         type="file"
         accept=".csv"
         onChange={(e) => setFile(e.target.files[0])}
       />
-
       <button className="primary" onClick={handleUpload} disabled={loading}>
         {loading ? "Running EDA..." : "Run EDA"}
       </button>

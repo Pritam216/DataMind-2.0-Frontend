@@ -24,6 +24,35 @@ input[type="file"] {
   background: var(--input-bg);
 }
 
+/* .file-upload {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 2px dashed var(--border);
+  background: var(--input-bg);
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.file-upload p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.file-upload svg {
+  color: var(--text);
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+} */
+
 button.primary {
   background: linear-gradient(135deg, #6366f1, #22d3ee);
   color: white;
