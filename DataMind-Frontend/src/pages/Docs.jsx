@@ -3,7 +3,8 @@ import ReactMarkdown from "react-markdown";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import "./Docs.css";
-import docsMarkdown from "./docs.md?raw"
+import docsMarkdown from "./docs.md?raw";
+
 export default function Docs() {
   // useEffect(() => {
   //   // Force re-sync theme when Docs mounts
