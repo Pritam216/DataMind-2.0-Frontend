@@ -22,6 +22,8 @@ export default function UploadCard({
     try {
       setLoading(true);
 
+      console.log("Uploading to:", `${API_BASE}/run-eda`);
+      
       const res = await fetch(`${API_BASE}/run-eda`, {
         method: "POST",
         body: formData,
