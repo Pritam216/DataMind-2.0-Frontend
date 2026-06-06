@@ -83,7 +83,7 @@ It allows users to:
 The frontend communicates with the DataMind backend via REST APIs.
 
 ```js
-const API_BASE = "https://datamind-20-production.up.railway.app";
+const API_BASE = "https://datamind-2-0.onrender.com/";
 ```
 
 ### Main Endpoints Used
