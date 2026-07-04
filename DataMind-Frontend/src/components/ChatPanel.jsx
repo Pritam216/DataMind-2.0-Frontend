@@ -267,29 +267,6 @@ export default function ChatPanel({
   };
 
   return (
-    // <div className={`right-panel ${!chatEnabled ? "chat-locked" : ""}`}>
-    //   <h2>Chat</h2>
-    //   {!chatEnabled && (
-    //     <div className="chat-overlay">
-    //       <div className="chat-overlay-content">
-    //         <h3>Upload data to start chatting</h3>
-    //         <p>
-    //           Run EDA on a CSV file first. Once analysis is ready, you can ask
-    //           questions about your data.
-    //         </p>
-    //       </div>
-    //     </div>
-    //   )}
-    //   <ChatMessages messages={messages} />
-    //   <ChatInput
-    //     chatInput={chatInput}
-    //     setChatInput={setChatInput}
-    //     sendChat={sendChat}
-    //     streaming={streaming}
-    //     disabled={!chatEnabled}
-    //   />
-    //   <div ref={messagesEnd} />
-    // </div>
     <div className="right-panel">
       {!chatEnabled && (
         <div className="chat-overlay">

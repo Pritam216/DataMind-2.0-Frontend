@@ -10,7 +10,7 @@
   border-radius: 16px;
   margin-bottom: 12px;
   line-height: 1.6;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .chat-bubble.user {
@@ -25,6 +25,14 @@
   color: var(--text);
   margin-right: auto;
   border-bottom-left-radius: 6px;
+}
+
+@media (max-width: 480px) {
+  .chat-bubble {
+    max-width: 100%;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
 }
 
 .dark .chat-bubble.ai p,

@@ -10,9 +10,27 @@
   background: var(--input-bg);
   color: var(--text);
   border: 1px solid var(--border);
-  transition: background 0.25s ease, color 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
 .chat-input input::placeholder {
   color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .chat-input {
+    flex-direction: column;
+  }
+
+  .chat-input input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-input input {
+    padding: 10px;
+  }
 }

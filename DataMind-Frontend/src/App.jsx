@@ -1,9 +1,3 @@
-// // import { useState } from "react";
-// // import ReactMarkdown from "react-markdown";
-// // import "./App.css";
-
-// // const API_BASE = "http://localhost:8000";
-// // // change to deployed URL if needed
 import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";

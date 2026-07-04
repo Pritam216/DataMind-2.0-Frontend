@@ -1,61 +1,4 @@
-/* .chat-card {
-  background: var(--card-bg);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: background 0.25s ease, color 0.25s ease;
-}
-
-.chat-locked {
-  filter: blur(3px);
-  pointer-events: none;
-}
-
-.chat-panel {
-  background: #ffffff;
-  color: #1f2937;
-}
-
-.chat-bubble.user {
-  background: #2563eb;
-  color: white;
-}
-
-.chat-bubble.ai {
-  background: #e5e7eb;
-  color: #111827;
-}
-
-.dark .chat-panel {
-  background: #020617;
-  color: #e5e7eb;
-}
-
-.dark .chat-bubble.user {
-  background: #1d4ed8;
-  color: #f8fafc;
-}
-
-.dark .chat-bubble.ai {
-  background: #1e293b;
-  color: #e5e7eb;
-}
-
-.dark .chat-input input {
-  background: #020617;
-  color: #e5e7eb;
-  border: 1px solid #334155;
-}
-
-.dark .chat-input button {
-  background: #2563eb;
-  color: white;
-} */
-
----------------- CHAT CARD ----------------
+/* ---------------- CHAT CARD ---------------- */
 .chat-card {
   background: var(--card-bg);
   color: var(--text);
@@ -64,7 +7,9 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: background 0.25s ease, color 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
 /* ---------------- LOCKED STATE ---------------- */
@@ -83,6 +28,8 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
 /* ---------------- MESSAGE BUBBLES ---------------- */
@@ -157,9 +104,10 @@ body.dark .chat-input button {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   padding: 24px 28px;
+  margin: 0px 10px 0px 10px;
   border-radius: 16px;
   text-align: center;
-  max-width: 360px;
+  max-width: min(360px, calc(100vw - 24px));
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -217,14 +165,13 @@ body.dark .chat-overlay-content p {
 
 .chat-overlay {
   position: absolute;
-  inset: 0;              /* top:0 right:0 bottom:0 left:0 */
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
   z-index: 30;
   display: flex;
-  align-items: center;   /* vertical center */
+  align-items: center; /* vertical center */
   justify-content: center; /* horizontal center */
   pointer-events: none;
 }
-
 
 .chat-overlay-content {
   background: rgba(255, 255, 255, 0.9);
@@ -299,6 +246,33 @@ body.dark .chat-overlay-content p {
 
 body.dark .chat-messages::-webkit-scrollbar-thumb {
   background: #3b82f6; /* dark mode thumb */
+}
+
+@media (max-width: 768px) {
+  .right-panel,
+  .chat-panel {
+    padding: 16px;
+  }
+
+  .chat-overlay-content {
+    max-width: calc(100% - 24px);
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-panel,
+  .chat-panel {
+    padding: 12px;
+  }
+
+  .chat-overlay-content h3 {
+    font-size: 16px;
+  }
+
+  .chat-overlay-content p {
+    font-size: 13px;
+  }
 }
 
 /* ---------------- MESSAGE BUBBLES ---------------- */

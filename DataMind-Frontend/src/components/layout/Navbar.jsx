@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar({ darkMode, setDarkMode }) {
-  // useEffect(() => {
-  //   document.body.className = darkMode ? "dark" : "light";
-  // }, [darkMode]);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";

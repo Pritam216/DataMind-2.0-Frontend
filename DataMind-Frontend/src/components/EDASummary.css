@@ -6,7 +6,6 @@
   transition: all 0.3s ease;
   border: 1px solid var(--border);
 
-  /* ✅ IMPORTANT */
   color: #111827; /* black text for light mode */
 }
 

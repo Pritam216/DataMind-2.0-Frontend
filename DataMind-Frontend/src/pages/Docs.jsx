@@ -8,12 +8,6 @@ import "./Docs.css";
 import docsMarkdown from "./docs.md?raw";
 
 export default function Docs() {
-  // useEffect(() => {
-  //   // Force re-sync theme when Docs mounts
-  //   const theme = localStorage.getItem("theme") || "light";
-  //   document.body.classList.remove("light", "dark");
-  //   document.body.classList.add(theme);
-  // }, []);
   return (
     <>
       <Navbar />
