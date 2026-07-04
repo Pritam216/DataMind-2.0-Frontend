@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://datamind-2-0.onrender.com/$1"
+    }
+  ]
+}

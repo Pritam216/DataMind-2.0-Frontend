@@ -7,9 +7,7 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import "../App.css";
 
-// const API_BASE = "http://localhost:8000";
-// const API_BASE = "https://datamind-20-production.up.railway.app";
-const API_BASE = "https://datamind-2-0.onrender.com";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "/api";
 
 export default function Home() {
   const [file, setFile] = useState(null);
