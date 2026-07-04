@@ -23,36 +23,41 @@ export default function UploadCard({
       setLoading(true);
 
       console.log("Uploading to:", `${API_BASE}/run-eda`);
-      
+
       const res = await fetch(`${API_BASE}/run-eda`, {
         method: "POST",
         body: formData,
       });
 
-      let data;
-      try {
-        data = await res.json(); // parse JSON safely
-      } catch (err) {
-        console.error("Failed to parse JSON:", err);
-        throw new Error(
-          `Invalid JSON response from server (status ${res.status})`
-        );
+      const responseText = await res.text();
+      let data = null;
+
+      if (responseText) {
+        try {
+          data = JSON.parse(responseText);
+        } catch {
+          console.error("Non-JSON response from server:", responseText);
+        }
       }
 
       if (!res.ok) {
-        throw new Error(data?.detail || `EDA failed with status ${res.status}`);
+        const message =
+          data?.detail ||
+          data?.message ||
+          responseText ||
+          `EDA failed with status ${res.status}`;
+        throw new Error(message);
       }
 
       // IMPORTANT: summary is markdown
-      setSummary(data.summary || "");
-      setRunId(data.run_id || "");
+      setSummary(data?.summary || "");
+      setRunId(data?.run_id || "");
     } catch (err) {
       alert(err.message);
     } finally {
       setLoading(false);
     }
   };
-
 
   return (
     <div className="card">
